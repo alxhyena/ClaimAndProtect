@@ -1,0 +1,47 @@
+---
+name: ClaimAndProtect
+version: 1.0.0
+main: xeonch\ClaimAndProtect\Main
+api: 5.0.0
+src-namespace-prefix: xeonch\ClaimAndProtect
+author: XeonCh
+
+permissions:
+  claimandprotect.bypass:
+    default: op
+  claimandprotect.command:
+    default: true
+  claimandprotect.command.setfirst:
+    default: true
+  claimandprotect.command.setsecond:
+    default: true
+  claimandprotect.command.claim:
+    default: true
+  claimandprotect.command.settings:
+    default: true
+  claimandprotect.command.here:
+    default: true
+  claimandprotect.command.myland:
+    default: true
+  claimandprotect.command.infoland:
+    default: true
+  claimandprotect.command.remove:
+    default: true
+  claimandprotect.command.tp:
+    default: true
+  claimandprotect.command.admin:
+    default: op
+    description: Admin command  
+  claimandprotect.admin.settings:
+    default: op
+    description: Admin manage settings land
+  claimandprotect.admin.tp:
+    default: op
+    description: Teleport to land
+  claimandprotect.admin.myland:
+    default: op
+    description: See land player
+  claimandprotect.admin.remove:
+    default: op
+    description: Remove land player
+...

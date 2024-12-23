@@ -1,0 +1,42 @@
+# DO NOT EDIT THIS VALUE, INTERNAL USE ONLY.
+config-version: 5
+
+# Sets the prefix for this plugin.
+prefix: "[&bClaim And Protect&r]"
+
+# Sets the default language for the plugin, you can edit text and messages in this file.
+default-language: en_US
+
+# multi-economy setting
+economy:
+  # bedrockeconomy = BedrockEconomy
+  # economys, economyapi = EconomyAPI
+  # experience, exp, xp = Exp Minecraft
+  provider: economyapi
+
+# all settings of this plugin are here
+cnp-settings:
+  # players limit land
+  # infinity for infinity limit
+  player-limit-land: infinity
+  # to maximize friends in your land
+  # 'infinity' for infinite max friend
+  max-friends: 5
+  # price per block, ex 6 block 6 * price
+  price-per-block: 100
+  # Worlds to blacklist players to buy
+  # ex, blacklist-world: ["lobby", "world"]
+  blacklist-world: []
+  # This is the percentage of the discount you get when selling land.
+  # For example, if a player buys land for a price of '1000', if the value is filled in as '10'
+  # it means he gets '900' because it is cut by 10%.
+  percent-sold: 10
+
+session-timer:
+  first-session: false
+    # If true, this will enable the first session timer.
+  first-timer: 15 # Timer duration in seconds.
+
+  second-session: false
+    # If true, this will enable the second session timer.
+  second-timer: 15 # Timer duration in seconds.

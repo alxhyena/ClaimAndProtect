@@ -1,0 +1,143 @@
+# Versi Konfigurasi Bahasa
+lang-version: 4
+
+# Pengaturan Posisi
+## Pesan Posisi Pertama
+saved-first-position: "&bPosisi pertama berhasil disimpan, {POSITION}"
+ready-first-position: "&bAnda siap untuk mengatur posisi pertama. Interaksi dengan blok untuk menyimpan lokasinya."
+ready-first-position-timer: "&eTimer aktif, Anda memiliki waktu {TIMER} detik untuk mengatur posisi pertama."
+time-expired-first-set: "&cWaktu untuk mengatur posisi pertama telah habis, silakan atur ulang posisi pertama."
+already-first-session: "&cAnda sudah berada dalam sesi pertama, silakan selesaikan sesi ini terlebih dahulu."
+
+## Pesan Posisi Kedua
+saved-second-position: "&bPosisi kedua berhasil disimpan, {POSITION}"
+ready-second-position: "&bAnda siap untuk mengatur posisi kedua. Interaksi dengan blok untuk menyimpan lokasinya."
+ready-second-position-timer: "&eTimer aktif, Anda memiliki waktu {TIMER} detik untuk mengatur posisi kedua."
+time-expired-second-set: "&cWaktu untuk mengatur posisi kedua telah habis, silakan atur ulang posisi kedua."
+already-second-session: "&cAnda sudah berada dalam sesi kedua, silakan selesaikan sesi ini terlebih dahulu."
+
+# Pesan Izin
+no-have-permission-admin: "&cAnda tidak memiliki izin untuk mengakses perintah ini"
+
+# Pengaturan Dunia
+blacklist-world: "&cDunia ini masuk daftar hitam untuk klaim tanah"
+different-world: "Posisi 1 dan posisi 2 harus berada di dunia yang sama"
+
+# Pesan Pengaturan Tanah
+land-not-setup-yet: "&cTanah Anda belum diatur, silakan atur terlebih dahulu jika ingin mengklaimnya."
+done-set-position: "&aTanah Anda telah diatur dengan luas {WIDE} blok, dengan harga {PRICE}, gunakan '/claimandprotect claim' untuk membeli tanah Anda"
+land-limit: "&cAnda telah melampaui batas pembuatan tanah."
+land-around-here: "&c[!] §fAda tanah ID:{ID} di dekat sini. Pemilik: {OWNER}"
+no-land-here: "&cTidak ada tanah di sini"
+no-land-owned: "&c{NAME} tidak memiliki tanah yang diklaim."
+land-overlap: "&cTanah yang ingin Anda klaim tumpang tindih dengan tanah lain."
+
+# Pesan Ekonomi
+not-enough-money: "&cUang Anda tidak cukup untuk membeli tanah ini"
+generic-error: "&cTidak dapat mengambil uang dari akun Anda."
+
+# Pesan Teleportasi
+command-tp-invalid-id: "&cAnda harus menentukan ID tanah yang valid."
+command-settings-id-not-exist: "&cTanah dengan ID {ID} tidak ada."
+tp-no-have-permission: "&cAnda bukan pemilik tanah ini dan tidak memiliki izin untuk mengelolanya."
+tp-success: "&aAnda telah dipindahkan ke pusat tanah dengan ID {ID}."
+
+# Pesan Perintah
+command-use-in-game: "Anda hanya dapat menggunakan perintah ini dalam permainan."
+command-help-title: "§b--- Perintah ClaimAndProtect ---"
+command-invalid-subcommand: "§cSubperintah tidak valid! Gunakan /claimandprotect untuk bantuan."
+command-settings-invalid-id: "&cAnda harus menentukan ID tanah yang valid."
+
+# Pesan Menu
+## Menu Klaim
+claim-succes: "&aAnda berhasil mengklaim tanah Anda dengan id {ID}"
+claim-title-form: "Form Klaim"
+claim-content-form: "Luas: {WIDE}{LINE}Uang Anda: {MONEY}{LINE}Harga: {PRICE}{LINE}Pos 1: {POS1}{LINE}Pos 2: {POS2}"
+claim-button-form: "&aKLAIM"
+
+## Menu Pengaturan
+settings-menu-title-form: "Menu Pengaturan"
+settings-menu-settings-form: "Pengaturan"
+settings-menu-friends-form: "Teman"
+settings-menu-transfer-form: "Transfer Kepemilikan"
+settings-menu-permission-form: "Izin Anggota"
+settings-title-form: "Pengaturan Tanah"
+settings-succes: "&aTanah dengan id {ID} berhasil diperbarui"
+
+### Opsi Pengaturan
+settings-fly-form: "Izinkan terbang di tanah ini?"
+settings-break-form: "Izinkan menghancurkan blok?"
+settings-place-form: "Izinkan menempatkan blok?"
+settings-pvp-form: "Aktifkan PvP?"
+settings-interact-form: "Izinkan interaksi?"
+settings-drop-form: "Izinkan menjatuhkan item?"
+
+## Menu Teman
+settings-friends-title-form: "Menu Teman"
+settings-friends-addbutton-form: "Undang Teman"
+settings-friends-removebutton-form: "Hapus Teman"
+already-friend: "&c{NAME} sudah menjadi teman Anda!"
+friend-added: "&a{NAME} telah ditambahkan sebagai teman!"
+no-friends-to-remove: "&cTidak ada teman untuk dihapus."
+friend-not-found: "&c{NAME} tidak ada dalam daftar teman."
+friend-removed: "&e{NAME} telah dihapus dari daftar teman Anda!"
+select-player-add: "Pilih pemain untuk ditambahkan sebagai teman:"
+select-player-remove: "Pilih teman untuk dihapus:"
+no-online-players: "&cTidak ada pemain yang online"
+max-friends-reached: "&cAnda telah mencapai batas maksimum teman."
+
+## Pengaturan Izin
+settings-permission-title: "Kelola Izin Anggota"
+settings-permission-teleport: "Izinkan Teleportasi"
+settings-permission-settings: "Izinkan Pengaturan"
+settings-permission-addfriend: "Izinkan Menambah Teman"
+settings-permission-removefriend: "Izinkan Menghapus Teman"
+settings-permission-updated: "&aIzin diperbarui untuk tanah {ID}"
+settings-no-have-permission: "&cAnda tidak memiliki izin untuk mengubah pengaturan ini."
+
+## Menu Tanah Saya
+my-land-title: "Tanah Saya"
+my-land-list-content: "Pilih tanah untuk melihat detailnya."
+my-land-button-form: "ID Tanah: {ID}{LINE}Pemilik: {OWNER}"
+
+## Menu Info Tanah
+info-land-invalid-command: "&cPerintah tidak valid"
+info-land-not-found: "&cTanah dengan id {ID} tidak ditemukan"
+info-land-title-form: "Detail Tanah ID: {ID}"
+info-land-button1-form: "&cKEMBALI"
+info-land-button2-form: "&4TUTUP"
+info-land-content-form: "Tentang Tanah:{LINE}ID: {ID}{LINE}Pemilik: {OWNER}{LINE}Posisi Pertama: {POS1}{LINE}Posisi Kedua: {POS2}{LINE}Dunia: {WORLD}{LINE}Anggota: {MEMBER}{LINE}Harga: {PRICE}{LINE}Luas: {WIDE}{LINE}Terbang: {FLY}{LINE}Hancur: {BREAK}{LINE}Taruh: {PLACE}{LINE}PVP: {PVP}{LINE}Interaksi: {INTERACT}{LINE}Jatuhkan: {DROP}{LINE}{LINE}"
+
+## Menu Hapus Tanah
+remove-land-title: "Jual Tanah"
+remove-land-list-content: "Pilih tanah untuk dijual/dihapus."
+remove-land-button-form: "ID Tanah: {ID}{LINE}Ketuk untuk menjual"
+
+## Menu Konfirmasi
+confirm-remove-title-form: "Konfirmasi Hapus"
+confirm-remove-content-form: "Apakah Anda yakin ingin menjual tanah dengan ID {ID}?, Anda akan mendapatkan {EARN} untuk menjualnya"
+confirm-remove-button1-form: "&aJUAL"
+confirm-remove-button2-form: "&cBATAL"
+confirm-remove-success: "&aTanah dengan id {ID} berhasil dijual, dan Anda mendapatkan uang {EARN}."
+
+## Menu Transfer Kepemilikan
+transfer-owner-title-form: "Transfer Kepemilikan"
+select-new-owner: "Pilih anggota untuk ditransfer kepemilikan:"
+transfer-owner-success: "&aKepemilikan tanah telah berhasil ditransfer dari {OLD_OWNER} ke {NEW_OWNER}."
+no-members-to-transfer: "&cTidak ada anggota yang tersedia untuk transfer kepemilikan."
+invalid-member-selected: "&cAnggota yang dipilih tidak valid."
+
+## Menu Admin
+admin-land-title: "Admin Tanah Untuk {NAME}"
+admin-land-list-content: "Pilih tanah untuk mengelolanya"
+admin-land-button-form: "ID Tanah: {ID}{LINE}Ketuk untuk mengelola"
+command-admin-id-not-exist: "Tanah dengan ID {ID} tidak ada."
+admin-menu-title: "Menu Admin - Tanah {ID}"
+admin-menu-list-content: "Pilih opsi di bawah ini:"
+admin-menu-settings-form: "Pengaturan Tanah"
+admin-menu-settings-perms-form: "Pengaturan Izin Anggota Tanah"
+admin-menu-friends-form: "Kelola Teman"
+admin-menu-info-form: "Informasi Tanah"
+admin-menu-transfer-form: "Transfer Kepemilikan"
+admin-menu-teleport-form: "Teleportasi ke Tanah"
+admin-menu-remove-form: "Hapus Tanah"

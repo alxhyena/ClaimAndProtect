@@ -1,0 +1,143 @@
+# Language Configuration Version
+lang-version: 4
+
+# Position Settings
+## First Position Messages
+saved-first-position: "&bFirst position saved successfully, {POSITION}"
+ready-first-position: "&bYou are now ready to set the first position. Interact with a block to save its location."
+ready-first-position-timer: "&eTimer is active, you have {TIMER} seconds to set the first position."
+time-expired-first-set: "&cTime for setting the first position has expired, please reset the first position."
+already-first-session: "&cYou are already in the first session, please finish this session first."
+
+## Second Position Messages
+saved-second-position: "&bSecond position saved successfully, {POSITION}"
+ready-second-position: "&bYou are now ready to set the second position. Interact with a block to save its location."
+ready-second-position-timer: "&eTimer is active, you have {TIMER} seconds to set the second position."
+time-expired-second-set: "&cTime for setting the second position has expired, please reset the second position."
+already-second-session: "&cYou are already in the second session, please finish this session first."
+
+# Permission Messages
+no-have-permission-admin: "&cYou do not have permission to access this command"
+
+# World Settings
+blacklist-world: "&cThis world is blacklisted for land"
+different-world: "World position 1 and position 2 must be the same"
+
+# Land Setup Messages
+land-not-setup-yet: "&cYour land has not been setup, please setup it first if you want to claim it."
+done-set-position: "&aYour land is already set with an area of {WIDE} blocks, with a price of {PRICE}, use '/claimandprotect claim' to buy your land"
+land-limit: "&cYou have exceeded the land creation limit."
+land-around-here: "&c[!] §fThere is ID:{ID} land near here. Owner : {OWNER}"
+no-land-here: "&cThere is no land here"
+no-land-owned: "&c{NAME} do not have any claimed land."
+land-overlap: "&cThe land you're trying to claim overlaps with another land."
+
+# Economy Messages
+not-enough-money: "&cYour money is not enough to buy this land"
+generic-error: "&cUnable to take money from your account."
+
+# Teleport Messages
+command-tp-invalid-id: "&cYou must specify a valid land ID."
+command-settings-id-not-exist: "&cLand with ID {ID} does not exist."
+tp-no-have-permission: "&cYou are not the owner of this land and do not have permission to manage it."
+tp-success: "&aYou have been moved to the land center with the ID {ID}."
+
+# Command Messages
+command-use-in-game: "You can only use this command in-game."
+command-help-title: "§b--- ClaimAndProtect Commands ---"
+command-invalid-subcommand: "§cInvalid subcommand! Use /claimandprotect for help."
+command-settings-invalid-id: "&cYou must specify a valid land ID."
+
+# Menu Messages
+## Claim Menu
+claim-succes: "&aYou successfully claim your land with id {ID}"
+claim-title-form: "Claim Form"
+claim-content-form: "Wide: {WIDE}{LINE}Your Money: {MONEY}{LINE}Price: {PRICE}{LINE}Pos 1: {POS1}{LINE}Pos 2: {POS2}"
+claim-button-form: "&aCLAIM"
+
+## Settings Menu
+settings-menu-title-form: "Settings Menu"
+settings-menu-settings-form: "Settings"
+settings-menu-friends-form: "Friends"
+settings-menu-transfer-form: "Transfer Owner"
+settings-menu-permission-form: "Permission Member"
+settings-title-form: "Land Settings"
+settings-succes: "&aLand with id {ID} successfully updated"
+
+### Settings Options
+settings-fly-form: "Allow flying in this land?"
+settings-break-form: "Allow breaking blocks?"
+settings-place-form: "Allow placing blocks?"
+settings-pvp-form: "Enable PvP?"
+settings-interact-form: "Allow interactions?"
+settings-drop-form: "Allow item drops?"
+
+## Friends Menu
+settings-friends-title-form: "Friends Menu"
+settings-friends-addbutton-form: "Invite Friend"
+settings-friends-removebutton-form: "Remove Friend"
+already-friend: "&c{NAME} is already your friend!"
+friend-added: "&a{NAME} has been added as a friend!"
+no-friends-to-remove: "&cThere are no friends to remove."
+friend-not-found: "&c{NAME} is not in the friend list."
+friend-removed: "&e{NAME} has been removed from your friends!"
+select-player-add: "Select a player to add as a friend:"
+select-player-remove: "Select a friend to remove:"
+no-online-players: "&cNo one players online"
+max-friends-reached: "&cYou have reached your maximum friend limit."
+
+## Permission Settings
+settings-permission-title: "Manage Member Permissions"
+settings-permission-teleport: "Allow Teleport"
+settings-permission-settings: "Allow Settings"
+settings-permission-addfriend: "Allow Add Friend"
+settings-permission-removefriend: "Allow Remove Friend"
+settings-permission-updated: "&aPermissions updated for land {ID}"
+settings-no-have-permission: "&cYou do not have permission to change these settings."
+
+## My Land Menu
+my-land-title: "My Land"
+my-land-list-content: "Select a land to view its details."
+my-land-button-form: "Land Id: {ID}{LINE}Owner: {OWNER}"
+
+## Land Info Menu
+info-land-invalid-command: "&cInvalid command"
+info-land-not-found: "&cLand with id {ID} not found"
+info-land-title-form: "Land Details ID: {ID}"
+info-land-button1-form: "&cBACK"
+info-land-button2-form: "&4CLOSE"
+info-land-content-form: "About Land:{LINE}ID: {ID}{LINE}Owner: {OWNER}{LINE}First Position: {POS1}{LINE}Second Position: {POS2}{LINE}World: {WORLD}{LINE}Member: {MEMBER}{LINE}Price: {PRICE}{LINE}WIde: {WIDE}{LINE}Fly: {FLY}{LINE}Break: {BREAK}{LINE}Place: {PLACE}{LINE}PVP: {PVP}{LINE}Interact: {INTERACT}{LINE}Drop: {DROP}{LINE}{LINE}"
+
+## Remove Land Menu
+remove-land-title: "Selling Land"
+remove-land-list-content: "Select a land to sell/remove."
+remove-land-button-form: "Land Id: {ID}{LINE}Tap to sell"
+
+## Confirmation Menu
+confirm-remove-title-form: "Confirmation Remove"
+confirm-remove-content-form: "Are you sure you want to sell land with ID {ID}?, you will get {EARN} for selling it"
+confirm-remove-button1-form: "&aSELL"
+confirm-remove-button2-form: "&cCANCEL"
+confirm-remove-success: "&aLand with id {ID} is successfully sold, and you get {EARN} money."
+
+## Transfer Owner Menu
+transfer-owner-title-form: "Transfer Ownership"
+select-new-owner: "Select a member to transfer ownership to:"
+transfer-owner-success: "&aThe ownership of the land has been successfully transferred from {OLD_OWNER} to {NEW_OWNER}."
+no-members-to-transfer: "&cNo members available to transfer ownership."
+invalid-member-selected: "&cThe selected member is invalid."
+
+## Admin Menu
+admin-land-title: "Admin Land For {NAME}"
+admin-land-list-content: "Select a land to manage it"
+admin-land-button-form: "Land Id: {ID}{LINE}Tap to manage"
+command-admin-id-not-exist: "The land with ID {ID} does not exist."
+admin-menu-title: "Admin Menu - Land {ID}"
+admin-menu-list-content: "Select an option below:"
+admin-menu-settings-form: "Land Settings"
+admin-menu-settings-perms-form: "Land Permission Member Settings"
+admin-menu-friends-form: "Manage Friends"
+admin-menu-info-form: "Land Information"
+admin-menu-transfer-form: "Transfer Ownership"
+admin-menu-teleport-form: "Teleport to Land"
+admin-menu-remove-form: "Remove Land"
