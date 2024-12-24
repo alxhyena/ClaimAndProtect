@@ -10,7 +10,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
-use pocketmine\event\Event;
+use pocketmine\event\entity\EntityExplodeEvent;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDropItemEvent;
@@ -20,6 +20,7 @@ use pocketmine\player\Player;
 use pocketmine\world\Position;
 use xeonch\ClaimAndProtect\Main;
 use xeonch\ClaimAndProtect\manager\LandManager;
+use xeonch\ClaimAndProtect\utils\Configuration;
 use xeonch\ClaimAndProtect\utils\Language;
 
 class CheckEvent implements Listener
@@ -36,6 +37,7 @@ class CheckEvent implements Listener
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockPlaceEvent", Closure::fromCallable([$checkEvent, 'onPlaceEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\entity\\EntityDamageEvent", Closure::fromCallable([$checkEvent, 'onPvpEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerMoveEvent", Closure::fromCallable([$checkEvent, 'onFlyEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\entity\\EntityExplodeEvent", Closure::fromCallable([$checkEvent, 'onExplodeEvent']), EventPriority::LOWEST, $plugin);
     }
 
     public function onPlaceEvent(BlockPlaceEvent $event)
@@ -166,6 +168,20 @@ class CheckEvent implements Listener
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    public function onExplodeEvent(EntityExplodeEvent $event)
+    {
+        $blocks = $event->getBlockList();
+        $landManager = new LandManager();
+        foreach ($blocks as $block) {
+            $pos = $event->getPosition();
+            if ($landManager->isInArea($pos)) {
+                if (!Configuration::getExplosion()) {
+                    $event->cancel();
                 }
             }
         }

@@ -15,6 +15,7 @@ class Configuration {
     private static string|int $limitLand = 5;
     private static string|int $pricePerBlock = 100;
     private static float|int $percentSold = 10;
+    private static bool $explosion = false;
     private static array $blacklistWorld = [];
 
     public static function init(Config $config, bool $reload = false) 
@@ -27,6 +28,7 @@ class Configuration {
         self::$pricePerBlock = $config->get("cnp-settings")['price-per-block'];
         self::$blacklistWorld = $config->get("cnp-settings")['blacklist-world'];
         self::$percentSold = $config->get("cnp-settings")['percent-sold'];
+        self::$explosion = $config->get("cnp-settings")['explosion'];
     }
 
     public static function getPrefix(): string
@@ -62,5 +64,10 @@ class Configuration {
     public static function getPercentSold(): string|int
     {
         return self::$percentSold;
+    }
+
+    public static function getExplosion(): bool
+    {
+        return self::$explosion;
     }
 }

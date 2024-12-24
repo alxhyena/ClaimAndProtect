@@ -83,18 +83,6 @@ class EventListener implements Listener
         Main::getInstance()->removePlayerSession($player);
     }
 
-    public function onPlayerMove(PlayerMoveEvent $event): void
-    {
-        $player = $event->getPlayer();
-        $landManager = new LandManager();
-        $landsInArea = $landManager->getLandsIn($player->getPosition());
-        foreach ($landsInArea as $landId => $landData) {
-            $player->sendTip("You are in land with ID: " . $landId);
-        }
-    }
-
-
-
     public function onJoin(PlayerJoinEvent $event)
     {
         $player = $event->getPlayer();
