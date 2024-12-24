@@ -178,7 +178,7 @@ class CheckEvent implements Listener
         $blocks = $event->getBlockList();
         $landManager = new LandManager();
         foreach ($blocks as $block) {
-            $pos = $event->getPosition();
+            $pos = $block->getPosition();
             if ($landManager->isInArea($pos)) {
                 if (!Configuration::getExplosion()) {
                     $event->cancel();
