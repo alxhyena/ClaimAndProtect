@@ -98,6 +98,9 @@ cnp-settings:
   # For example, if a player buys land for a price of '1000', if the value is filled in as '10'
   # it means he gets '900' because it is cut by 10%.
   percent-sold: 10
+  # if 'true' will allow explosion on land
+  # if 'false' then explosions are not allowed on land
+  explosion: false
 
 session-timer:
   first-session: false
