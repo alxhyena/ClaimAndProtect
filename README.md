@@ -21,7 +21,7 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
 - Pay-per-block claiming
 - `Refunds` on unclaiming
 
-### 🎮 User ExperienceV
+### 🎮 User Experience
 - Visual selection tools for claiming
 - `Form-based` interface for all features
 - Intuitive command system
@@ -41,27 +41,27 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
 ## 📝 Commands and Permissions
 **Main Command: `/claimandprotect` or `/cnp`**
 
-| Subcommand | Description | Permission | Default | Aliases |
-|-|-|:-:|:-:|-|
-| setfirst | Set the first position for claiming land | claimandprotect.command.setfirst | true | first, f |
-| setsecond | Set the second position for claiming land | claimandprotect.command.setsecond | true | second, sec, s |
-| claim | Claim your land after setup | claimandprotect.command.claim | true | - |
-| settings | Settings your land | claimandprotect.command.settings | true | setting |
-| here | Whose land is in this area? | claimandprotect.command.here | true | - |
-| myland | View all owned land | claimandprotect.command.myland | true | - |
-| info | Information of land with id | claimandprotect.command.infoland | true | - |
-| remove | Remove/sell your land | claimandprotect.command.remove | true | sell, rm, delete |
-| tp | Teleport to land with id | claimandprotect.command.tp | true | move, teleport, mv |
-| admin | Admin feature | claimandprotect.command.admin | op | - |
+| Subcommand | Description                               |            Permission             | Default | Aliases            |
+| ---------- | ----------------------------------------- | :-------------------------------: | :-----: | ------------------ |
+| setfirst   | Set the first position for claiming land  | claimandprotect.command.setfirst  |  true   | first, f           |
+| setsecond  | Set the second position for claiming land | claimandprotect.command.setsecond |  true   | second, sec, s     |
+| claim      | Claim your land after setup               |   claimandprotect.command.claim   |  true   | -                  |
+| settings   | Settings your land                        | claimandprotect.command.settings  |  true   | setting            |
+| here       | Whose land is in this area?               |   claimandprotect.command.here    |  true   | -                  |
+| myland     | View all owned land                       |  claimandprotect.command.myland   |  true   | -                  |
+| info       | Information of land with id               | claimandprotect.command.infoland  |  true   | -                  |
+| remove     | Remove/sell your land                     |  claimandprotect.command.remove   |  true   | sell, rm, delete   |
+| tp         | Teleport to land with id                  |    claimandprotect.command.tp     |  true   | move, teleport, mv |
+| admin      | Admin feature                             |   claimandprotect.command.admin   |   op    | -                  |
 
 ### Admin Permissions
-| Permission | Description | Default |
-|-|-|:-:|
-| claimandprotect.bypass | Bypass all protections | op |
-| claimandprotect.admin.settings | Admin manage settings land | op |
-| claimandprotect.admin.tp | Teleport to any land | op |
-| claimandprotect.admin.myland | See any player's land | op |
-| claimandprotect.admin.remove | Remove any player's land | op |
+| Permission                     | Description                | Default |
+| ------------------------------ | -------------------------- | :-----: |
+| claimandprotect.bypass         | Bypass all protections     |   op    |
+| claimandprotect.admin.settings | Admin manage settings land |   op    |
+| claimandprotect.admin.tp       | Teleport to any land       |   op    |
+| claimandprotect.admin.myland   | See any player's land      |   op    |
+| claimandprotect.admin.remove   | Remove any player's land   |   op    |
 
 ## ⚙️ Configuration
 ```yaml
@@ -98,9 +98,6 @@ cnp-settings:
   # For example, if a player buys land for a price of '1000', if the value is filled in as '10'
   # it means he gets '900' because it is cut by 10%.
   percent-sold: 10
-  # if 'true' will allow explosion on land
-  # if 'false' then explosions are not allowed on land
-  explosion: false
 
 session-timer:
   first-session: false
@@ -110,7 +107,6 @@ session-timer:
   second-session: false
     # If true, this will enable the second session timer.
   second-timer: 15 # Timer duration in seconds.
-
 ```
 
 ## 👨🏻‍💻 For Developer
