@@ -13,6 +13,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityExplodeEvent;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerBedEnterEvent;
 use pocketmine\event\player\PlayerDropItemEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerMoveEvent;
@@ -32,6 +33,7 @@ class CheckEvent implements Listener
     {
         $checkEvent = new CheckEvent();
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerInteractEvent", Closure::fromCallable([$checkEvent, 'onInteractEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerBedEnterEvent", Closure::fromCallable([$checkEvent, 'enterBedEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockBreakEvent", Closure::fromCallable([$checkEvent, 'onBreakEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerDropItemEvent", Closure::fromCallable([$checkEvent, 'onDropEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockPlaceEvent", Closure::fromCallable([$checkEvent, 'onPlaceEvent']), EventPriority::LOWEST, $plugin);
@@ -88,7 +90,7 @@ class CheckEvent implements Listener
     public function onInteractEvent(PlayerInteractEvent $event)
     {
         $player = $event->getPlayer();
-        $block = $event->getBlock()->getSide($event->getFace());
+        $block = $event->getBlock();
         $posBlock = new Position($block->getPosition()->getX(), $block->getPosition()->getY(), $block->getPosition()->getZ(), $block->getPosition()->getWorld());
         $landManager = new LandManager();
         $landsInArea = $landManager->getLandsIn($posBlock);
@@ -182,6 +184,26 @@ class CheckEvent implements Listener
             if ($landManager->isInArea($pos)) {
                 if (!Configuration::getExplosion()) {
                     $event->cancel();
+                }
+            }
+        }
+    }
+
+    public function enterBedEvent(PlayerBedEnterEvent $event)
+    {
+        $player = $event->getPlayer();
+        $bed = $event->getBed();
+        $landManager = new LandManager();
+        $landsInArea = $landManager->getLandsIn($bed->getPosition());
+        foreach ($landsInArea as $landId => $landData) {
+            if ($landData['owner'] !== $player->getName()) {
+                if (!$player->hasPermission("claimandprotect.bypass")) {
+                    if (!$landData['interact'] && !in_array($player->getName(), $landData['member'])) {
+                        $event->cancel();
+                        $msg = str_replace(["{OWNER}", "{ID}"], [$landData['owner'], $landId], Language::get($player, "land-around-here", true));
+                        $player->sendMessage($msg);
+                        return;
+                    }
                 }
             }
         }
