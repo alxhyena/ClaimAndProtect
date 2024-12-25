@@ -41,18 +41,19 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
 ## 📝 Commands and Permissions
 **Main Command: `/claimandprotect` or `/cnp`**
 
-| Subcommand | Description                               |            Permission             | Default | Aliases            |
-| ---------- | ----------------------------------------- | :-------------------------------: | :-----: | ------------------ |
-| setfirst   | Set the first position for claiming land  | claimandprotect.command.setfirst  |  true   | first, f           |
-| setsecond  | Set the second position for claiming land | claimandprotect.command.setsecond |  true   | second, sec, s     |
-| claim      | Claim your land after setup               |   claimandprotect.command.claim   |  true   | -                  |
-| settings   | Settings your land                        | claimandprotect.command.settings  |  true   | setting            |
-| here       | Whose land is in this area?               |   claimandprotect.command.here    |  true   | -                  |
-| myland     | View all owned land                       |  claimandprotect.command.myland   |  true   | -                  |
-| info       | Information of land with id               | claimandprotect.command.infoland  |  true   | -                  |
-| remove     | Remove/sell your land                     |  claimandprotect.command.remove   |  true   | sell, rm, delete   |
-| tp         | Teleport to land with id                  |    claimandprotect.command.tp     |  true   | move, teleport, mv |
-| admin      | Admin feature                             |   claimandprotect.command.admin   |   op    | -                  |
+| Subcommand | Description                                     |            Permission             | Default | Aliases            |
+| ---------- | ----------------------------------------------- | :-------------------------------: | :-----: | ------------------ |
+| setfirst   | Set the first position for claiming land        | claimandprotect.command.setfirst  |  true   | first, f           |
+| setsecond  | Set the second position for claiming land       | claimandprotect.command.setsecond |  true   | second, sec, s     |
+| claim      | Claim your land after setup                     |   claimandprotect.command.claim   |  true   | -                  |
+| settings   | Settings your land                              | claimandprotect.command.settings  |  true   | setting            |
+| here       | Whose land is in this area?                     |   claimandprotect.command.here    |  true   | -                  |
+| myland     | View all owned land                             |  claimandprotect.command.myland   |  true   | -                  |
+| info       | Information of land with id                     | claimandprotect.command.infoland  |  true   | -                  |
+| remove     | Remove/sell your land                           |  claimandprotect.command.remove   |  true   | sell, rm, delete   |
+| tp         | Teleport to land with id                        |    claimandprotect.command.tp     |  true   | move, teleport, mv |
+| admin      | Admin feature                                   |   claimandprotect.command.admin   |   op    | -                  |
+| migration  | Migration plugin EconomyLand to ClaimAndProtect | claimandprotect.command.migration |   op    | migrate            |
 
 ### Admin Permissions
 | Permission                     | Description                | Default |
@@ -63,6 +64,34 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
 | claimandprotect.admin.myland   | See any player's land      |   op    |
 | claimandprotect.admin.remove   | Remove any player's land   |   op    |
 
+### 📑 How to migrate EconomyLand plugin to ClaimAndProtect
+
+1. Step one
+   move the Land.yml file to the `migrate` ClaimAndProtect folder
+
+    >Path Land.yml
+    ```
+    plugin_data 📁
+      │
+      ├── EconomyLand 📁
+      │    └── Land.yml 📄
+    ```
+    
+    >Path Migrate Plugin
+    ```
+    plugin_data 📁
+      │
+      ├── ClaimAndProtect 📁
+      │    └── migration 📁
+      │        └──Land.yml 📄 (paste here)
+    ```
+2. Step two
+   run command in console (console only)
+   ```bash
+   /claimandprotect migration
+   ```
+   if successful it will be like this
+   ![migrate_succes](assets/migrate_succes.png)
 ## ⚙️ Configuration
 ```yaml
 # DO NOT EDIT THIS VALUE, INTERNAL USE ONLY.

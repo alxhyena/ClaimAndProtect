@@ -31,7 +31,10 @@ permissions:
     default: true
   claimandprotect.command.admin:
     default: op
-    description: Admin command  
+    description: Admin command
+  claimandprotect.command.migration:
+    default: op
+    description: Migrate plugin
   claimandprotect.admin.settings:
     default: op
     description: Admin manage settings land

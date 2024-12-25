@@ -17,6 +17,7 @@ use xeonch\ClaimAndProtect\commands\subcommands\SetSecondPositionSubCommand;
 use xeonch\ClaimAndProtect\commands\subcommands\SettingsLandSubCommand;
 use xeonch\ClaimAndProtect\commands\subcommands\TeleportToLandSubCommand;
 use pocketmine\player\Player;
+use xeonch\ClaimAndProtect\commands\subcommands\PluginMigration;
 use xeonch\ClaimAndProtect\utils\Language;
 
 class ClaimAndProtectCommand extends BaseCommand
@@ -35,6 +36,7 @@ class ClaimAndProtectCommand extends BaseCommand
         $this->registerSubCommand(new RemoveLandSubCommand("remove", "Remove/sell your land", ["sell", "rm", "delete"]));
         $this->registerSubCommand(new TeleportToLandSubCommand("tp", "Teleport to land with id", ["move", "teleport", "mv"]));
         $this->registerSubCommand(new AdminLandSubCommand("admin", "Admin feature", []));
+        $this->registerSubCommand(new PluginMigration("migration", "Migration plugin EconomyLand to ClaimAndProtect", ['migrate']));
     }
 
     public function getPermission()
