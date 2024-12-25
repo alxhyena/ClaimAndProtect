@@ -74,7 +74,7 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
     plugin_data 📁
       │
       ├── EconomyLand 📁
-      │    └── Land.yml 📄
+      │    └── Land.yml 📄 (copy this)
     ```
     
     >Path Migrate Plugin
@@ -92,6 +92,7 @@ A powerful land claiming and `protection` plugin for [PocketMine-MP](https://git
    ```
    if successful it will be like this
    ![migrate_succes](assets/migrate_succes.png)
+
 ## ⚙️ Configuration
 ```yaml
 # DO NOT EDIT THIS VALUE, INTERNAL USE ONLY.
