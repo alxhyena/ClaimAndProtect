@@ -6,4 +6,5 @@ projects:
   ClaimAndProtect:
     path: ""
     icon: "assets/icon.png"
+    lint: false
 ...
