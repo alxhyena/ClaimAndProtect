@@ -5,6 +5,9 @@ branches:
 projects:
   ClaimAndProtect:
     path: ""
-    icon: "assets/icon.png"
+    icon: "assets/icon.jpg"
+    libs:
+      - src: jojoe77777/FormAPI/FormAPI
+        version: ^2.1.1
     lint: false
 ...
