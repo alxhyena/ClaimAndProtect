@@ -32,7 +32,7 @@ class CheckEvent implements Listener
 
     public static function init(Main $plugin): void
     {
-        $eventHandler = new CheckEvent();
+        $checkEvent = new CheckEvent();
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerInteractEvent", Closure::fromCallable([$checkEvent, 'onInteractEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerBedEnterEvent", Closure::fromCallable([$checkEvent, 'enterBedEvent']), EventPriority::LOWEST, $plugin);
         $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockBreakEvent", Closure::fromCallable([$checkEvent, 'onBreakEvent']), EventPriority::LOWEST, $plugin);
