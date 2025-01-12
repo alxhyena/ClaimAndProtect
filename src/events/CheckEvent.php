@@ -33,17 +33,15 @@ class CheckEvent implements Listener
     public static function init(Main $plugin): void
     {
         $eventHandler = new CheckEvent();
-        $pluginManager = $plugin->getServer()->getPluginManager();
-
-        $pluginManager->registerEvent(PlayerInteractEvent::class, Closure::fromCallable([$eventHandler, 'onInteract']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(PlayerBedEnterEvent::class, Closure::fromCallable([$eventHandler, 'onBedEnter']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(BlockBreakEvent::class, Closure::fromCallable([$eventHandler, 'onBlockBreak']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(PlayerDropItemEvent::class, Closure::fromCallable([$eventHandler, 'onItemDrop']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(BlockPlaceEvent::class, Closure::fromCallable([$eventHandler, 'onBlockPlace']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(EntityDamageEvent::class, Closure::fromCallable([$eventHandler, 'onEntityDamage']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(PlayerMoveEvent::class, Closure::fromCallable([$eventHandler, 'onPlayerMove']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(EntityExplodeEvent::class, Closure::fromCallable([$eventHandler, 'onEntityExplode']), EventPriority::LOWEST, $plugin);
-        $pluginManager->registerEvent(EntityTrampleFarmlandEvent::class, Closure::fromCallable([$eventHandler, 'onTrampleFarmland']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerInteractEvent", Closure::fromCallable([$checkEvent, 'onInteractEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerBedEnterEvent", Closure::fromCallable([$checkEvent, 'enterBedEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockBreakEvent", Closure::fromCallable([$checkEvent, 'onBreakEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerDropItemEvent", Closure::fromCallable([$checkEvent, 'onDropEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\block\\BlockPlaceEvent", Closure::fromCallable([$checkEvent, 'onPlaceEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\entity\\EntityDamageEvent", Closure::fromCallable([$checkEvent, 'onPvpEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\player\\PlayerMoveEvent", Closure::fromCallable([$checkEvent, 'onFlyEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\entity\\EntityExplodeEvent", Closure::fromCallable([$checkEvent, 'onExplodeEvent']), EventPriority::LOWEST, $plugin);
+        $plugin->getServer()->getPluginManager()->registerEvent("pocketmine\\event\\entity\\EntityTrampleFarmlandEvent", Closure::fromCallable([$checkEvent, 'onTrampleFarmlandEvent']), EventPriority::LOWEST, $plugin);
     }
 
     public function onPlaceEvent(BlockPlaceEvent $event)
@@ -213,7 +211,7 @@ class CheckEvent implements Listener
         }
     }
 
-    public function onEntityTrampleFarmland(EntityTrampleFarmlandEvent $event): void
+    public function onTrampleFarmlandEvent(EntityTrampleFarmlandEvent $event): void
     {
         $entity = $event->getEntity();
         $pos = $event->getBlock()->getPosition();
