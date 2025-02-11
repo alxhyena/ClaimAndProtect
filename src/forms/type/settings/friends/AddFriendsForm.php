@@ -26,11 +26,13 @@ class AddFriendsForm
             $player->sendMessage($message);
             return;
         }
-        $maxFriends = Configuration::getMaxFriends() + 1;
-        if ($maxFriends !== "infinity" && (count($landData["member"]) + 1) >= (int)$maxFriends) {
-            $message = Language::get($player, "max-friends-reached", true);
-            $player->sendMessage($message);
-            return;
+        if (is_numeric(Configuration::getMaxFriends())) {
+            $maxFriends = (int)Configuration::getMaxFriends() + 1;
+            if ($maxFriends !== "infinity" && (count($landData["member"]) + 1) >= (int)$maxFriends) {
+                $message = Language::get($player, "max-friends-reached", true);
+                $player->sendMessage($message);
+                return;
+            }
         }
         $list = [];
         foreach (Main::getInstance()->getServer()->getOnlinePlayers() as $p) {
