@@ -5,11 +5,8 @@ branches:
 projects:
   ClaimAndProtect:
     path: ""
-    type: plugin
-    lint: false
     libs:
-      - src: Muqsit/SimplePacketHandler
-        branch: pm5
-        version: ^0.1.5
       - src: jojoe77777/FormAPI/libFormAPI
         version: ^2.1.1
+    lint: false
+...
