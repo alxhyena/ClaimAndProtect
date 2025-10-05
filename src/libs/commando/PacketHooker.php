@@ -29,6 +29,7 @@ declare(strict_types=1);
 
 namespace xeonch\ClaimAndProtect\libs\commando;
 
+use muqsit\simplepackethandler\SimplePacketHandler;
 use pocketmine\command\CommandSender;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
@@ -43,7 +44,6 @@ use ReflectionClass;
 use xeonch\ClaimAndProtect\libs\commando\exception\HookAlreadyRegistered;
 use xeonch\ClaimAndProtect\libs\commando\store\SoftEnumStore;
 use xeonch\ClaimAndProtect\libs\commando\traits\IArgumentable;
-use xeonch\ClaimAndProtect\libs\commando\simplepackethandler\SimplePacketHandler;
 
 use function array_unshift;
 
