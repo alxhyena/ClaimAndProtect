@@ -29,7 +29,8 @@ declare(strict_types=1);
 
 namespace xeonch\ClaimAndProtect\libs\commando;
 
-use muqsit\simplepackethandler\SimplePacketHandler;
+use xeonch\ClaimAndProtect\libs\commando\simplepackethandler\SimplePacketHandler;
+
 use pocketmine\command\CommandSender;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
