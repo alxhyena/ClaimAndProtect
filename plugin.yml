@@ -10,10 +10,9 @@ commands:
     description: Claim and protect your land
     usage: /claim
     permission: claimandprotect.command
-  claimandprotect:
-    description: (alias)
-    usage: /claimandprotect
-    permission: claimandprotect.command
+    aliases:
+      - claimandprotect
+      - cap
 
 permissions:
   claimandprotect.bypass:

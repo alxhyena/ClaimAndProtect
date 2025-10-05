@@ -50,7 +50,9 @@ class Main extends PluginBase
         }
         self::$multiEconomy = MultiEconomy::getProvider($this->getConfig()->get("economy"));
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
-        $this->getServer()->getCommandMap()->register("claimandprotect", new ClaimAndProtectCommand($this, "claimandprotect", "Claim your land and protect", ["cnp"]));
+        $this->getServer()->getCommandMap()->register(
+            $this->getName(),
+            new ClaimAndProtectCommand($this, "claim", "Claim your land and protect", ["claimandprotect", "cap"]));
         if (!class_exists(EconomyLand::class)) {
             $this->getServer()->getLogger()->info("Economy land not found, plugin is running safely");
             return;
