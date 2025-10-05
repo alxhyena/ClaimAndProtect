@@ -3,7 +3,6 @@ name: ClaimAndProtect
 version: 1.0.1
 main: xeonch\ClaimAndProtect\Main
 api: 5.0.0
-src-namespace-prefix: xeonch\ClaimAndProtect
 author: XeonCh
 
 permissions:
