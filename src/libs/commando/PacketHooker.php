@@ -29,6 +29,9 @@ declare(strict_types=1);
 
 namespace xeonch\ClaimAndProtect\libs\commando;
 
+use xeonch\ClaimAndProtect\libs\commando\exception\HookAlreadyRegistered;
+use xeonch\ClaimAndProtect\libs\commando\store\SoftEnumStore;
+use xeonch\ClaimAndProtect\libs\commando\traits\IArgumentable;
 use xeonch\ClaimAndProtect\libs\commando\simplepackethandler\SimplePacketHandler;
 
 use pocketmine\command\CommandSender;
@@ -42,9 +45,6 @@ use pocketmine\network\mcpe\protocol\types\command\CommandParameter;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 use ReflectionClass;
-use xeonch\ClaimAndProtect\libs\commando\exception\HookAlreadyRegistered;
-use xeonch\ClaimAndProtect\libs\commando\store\SoftEnumStore;
-use xeonch\ClaimAndProtect\libs\commando\traits\IArgumentable;
 
 use function array_unshift;
 
