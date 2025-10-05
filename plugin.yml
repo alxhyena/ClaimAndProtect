@@ -1,7 +1,7 @@
 ---
 name: ClaimAndProtect
 version: 1.0.2
-main: xeonch\ClaimAndProtect\Main
+main: Main
 api: 5.0.0
 author: XeonCh
 
