@@ -5,6 +5,16 @@ main: xeonch\ClaimAndProtect\Main
 api: 5.0.0
 author: XeonCh
 
+commands:
+  claim:
+    description: Claim and protect your land
+    usage: /claim
+    permission: claimandprotect.command
+  claimandprotect:
+    description: (alias)
+    usage: /claimandprotect
+    permission: claimandprotect.command
+
 permissions:
   claimandprotect.bypass:
     default: op
